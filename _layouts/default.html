@@ -11,6 +11,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+		<script src="https://kit.fontawesome.com/325849e1a1.js" crossorigin="anonymous"></script>
 
 		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
 			<script>
@@ -33,12 +34,31 @@
 				data-config-modal-style="side">
 			</div>
 		{% endif %}
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+		<script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
+		
+		<script>
+		VANTA.NET({
+		  el: "#vantajs",
+		  mouseControls: true,
+		  touchControls: true,
+		  gyroControls: false,
+		  minHeight: 200.00,
+		  minWidth: 200.00,
+		  scale: 1.00,
+		  scaleMobile: 1.00,
+		  color: 0xa33fff,
+		  backgroundColor: 0x361d51
+		})
+		</script>
+
 	</head>
 	<body>
-		<header>
+		<header id="vantajs">
 			<div class="container">
-				<div class="company-name"><a href="{{ site.baseurl }}/"><!-- {% include logo.html %} --><span>{{ site.title }}</span></a></div>
-				<!-- {% include navigation.html %} -->
+				<div class="company-name"><a href="{{ site.baseurl }}/">{% include logo.html %}<span>{{ site.title }}</span></a></div>
+				{% include navigation.html %}
 			</div>
 
 			<section class="hero">
@@ -55,8 +75,8 @@
 				</div>
 			</section>
 		</header>
-		<!-- {{ content }} -->
-		<!-- <footer>
+		{{ content }}
+		<footer>
 			<div class="container">
 				<ul class="footer-columns">
 					<li class="about">
@@ -65,39 +85,67 @@
 					</li>
 
 					<li class="footer-nav">
-						<h4>General</h4>
+						<h4>Help</h4>
 						<ul>
-							<li><a href="/">Products</a></li>
-							<li><a href="/about/">Our Story</a></li>
-							<li><a href="/contact/">Contact</a></li>
+							<li>
+								<a href="https://umanitoba.ca/student-supports/counselling-resources-students target="_blank" rel="noopener noreferrer">
+									Student Counseling Center
+								</a>
+							</li>
+							<li>
+								<a href="devclub.ca" target="_blank" rel="noopener noreferrer">
+									.devClub
+								</a>
+							</li>
+							<li>
+								<a href="devclub.ca" target="_blank" rel="noopener noreferrer">
+									.devClub
+								</a>
+							</li>
+							<!-- <li><a href="/about/">About</a></li> -->
+							<!-- <li><a href="/contact/">Contact</a></li> -->
 						</ul>
 					</li>
 
 					<li class="footer-nav">
-						<h4>Help</h4>
+						<h4>Community</h4>
 						<ul>
-							<li><a href="/shipping/">Shipping</a></li>
-							<li><a href="/returns/">Returns</a></li>
+							<li>
+								<a href="devclub.ca" target="_blank" rel="noopener noreferrer">
+									.devClub
+								</a>
+							</li>
+							<li>
+								<a href="https://umwics.vercel.app/" target="_blank" rel="noopener noreferrer">
+									wics Council
+								</a>
+							</li>
+							<li>
+								<a href="https://umsu.ca/student-clubs-associations/student-clubs/university-of-manitoba-minecraft-club-ummc/ " target="_blank" rel="noopener noreferrer">
+									UMMC
+								</a>
+							</li>
+							<!-- <li><a href="/shipping/">Shipping</a></li> -->
+							<!-- <li><a href="/returns/">Returns</a></li> -->
 						</ul>
 					</li>
 
 					<li>
 						<h4>Contact Us</h4>
-						<p>Need help with something? <a href="/contact/">Get in touch</a>.
 						<p class="email"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
-						<p><a href="tel:{{ site.author.phone }}">{{ site.author.phone }}</a></p>
+						<!-- <p><a href="tel:{{ site.author.phone }}">{{ site.author.phone }}</a></p> -->
 
 						<div class="social-icons">
-							<a class="facebook" href="https://facebook.com/cloudcannon/">{% include social-icon.html icon="Facebook2" %}</a>
-							<a class="twitter" href="https://twitter.com/cloudcannon/">{% include social-icon.html icon="Twitter" %}</a>
-							<a class="youtube" href="https://youtube.com/c/cloudcannon/">{% include social-icon.html icon="YouTube" %}</a>
-							<a class="linkedin" href="https://nz.linkedin.com/company/cloud-cannon">{% include social-icon.html icon="LinkedIn" %}</a>
+							<!-- <a class="facebook" href="https://facebook.com/">{% include social-icon.html icon="Facebook2" %}</a> -->
+							<!-- <a class="twitter" href="https://twitter.com/">{% include social-icon.html icon="Twitter" %}</a> -->
+							<!-- <a class="youtube" href="https://youtube.com//">{% include social-icon.html icon="YouTube" %}</a> -->
+							<!-- <a class="linkedin" href="https://nz.linkedin.com/company//">{% include social-icon.html icon="LinkedIn" %}</a> -->
 						</div>
 					</li>
 				</ul>
-				<p class="copyright">All Rights Reserved &copy; {{ site.time | date: '%Y' }} {{ site.title }}, Inc. Template by <a href="https://cloudcannon.com">CloudCannon</a></p>
+				<p class="copyright">All Rights Reserved &copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
 			</div>
-		</footer> -->
+		</footer>
 		<script>
 			document.getElementById("open-nav").onclick = function () {
 				document.body.classList.toggle("nav-open");

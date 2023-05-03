@@ -1,20 +1,28 @@
 ---
-title: Our Story
-hero: Our story
+title: Team
+hero: Meet the Team
 ---
 
-<p class="editor-link" style="text-align: center; position: relative;
-    top: -185px;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong> Manage Staff members</a></p>
+<!-- <p class="editor-link" style="text-align: center; position: relative;
+    top: -185px;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong> Manage Staff members</a></p> -->
 <ul class="staff">
 	{% for person in site.staff_members %}
 		<li>
 			<div class="staff-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
 			<div class="name">{{ person.name }}</div>
+			<div class="position">{{ person.position }}</div>
+			<div class="bio">{{ person.bio }}</div>
+			<div style="display: block;">
+				{% if person.website %} <a class="website social-button" href="{{ person.website }}"><i class="fa-solid fa-paperclip"></i></a> {% endif %}
+				{% if person.instagram %} <a class="instagram social-button" href="{{ person.instagram }}"><i class="fa-brands fa-instagram"></i></a> {% endif %}
+				{% if person.linkedin %} <a class="linkedin social-button" href="{{ person.linkedin }}" ><i class="fa-brands fa-linkedin"></i></a> {% endif %}
+				{% if person.github %} <a class="github social-button" href="{{ person.github }}"><i class="fa-brands fa-github"></i></a> {% endif %}
+			</div>
 		</li>
 	{% endfor %}
 </ul>
 
-<div class="thirds story-points">
+<!-- <div class="thirds story-points">
 	<div>
 		<h3 class="editable">Passion</h3>
 		<p class="editable">What more could you want from life than drawing animals and bringing happiness to others? We hope this passion show through in our work.</p>
@@ -27,4 +35,4 @@ hero: Our story
 		<h3 class="editable">Style</h3>
 		<p class="editable">We like to keep things plain and simple around here to help the animals speak for themselves.</p>
 	</div>
-</div>
+</div> -->
