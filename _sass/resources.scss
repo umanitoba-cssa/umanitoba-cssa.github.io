@@ -1,0 +1,56 @@
+
+.resource-image {
+	margin: 25px auto 0 auto;
+	background: no-repeat center center;
+	background-size: cover;
+	border-radius: 300px;
+	width: 70%;
+	padding-bottom: 70%;
+}
+
+.resources {
+	padding: 0;
+	list-style: none;
+	@extend %flexbox;
+	@include flex-flow(wrap);
+	text-align: center;
+	margin: 10px 0 0 0;
+	justify-content: center;
+
+	li {
+		padding: 30px 20px;
+		box-sizing: border-box;
+		flex: 0 1 25%;
+		background: #fff;
+		margin: 0 100px;
+		margin-bottom: 3%;
+		border-radius: 3px;
+		box-shadow: 0 10px 100px 0 rgba(0, 0, 0, 0.41);
+	}
+
+	.square-image {
+		width: 400px;
+		height: 400px;
+
+		img {
+			border-radius: 400px;
+		}
+	}
+
+	.name {
+		font-size: 1.3rem;
+		margin-top: 20px;
+		color:#666;
+	}
+
+	.link {
+		font-size: 1rem;
+		color: black;
+	}
+
+	.info {
+		font-size: 0.7rem;
+		color:#666;
+	}
+
+}
