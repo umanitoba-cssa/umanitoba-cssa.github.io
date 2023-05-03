@@ -4,26 +4,8 @@
 	{% include head.html %}
 	
 	<body>
-		<header>
-			<div class="container">
-				<div class="company-name"><a href="{{ site.baseurl }}/">{% include logo.html %}<span>{{ site.title }}</span></a></div>
-				{% include navigation.html %}
-			</div>
+		{% include header.html %}
 
-			<section class="hero"	>
-				<div class="text-container">
-					{% if page.hero %}
-						<h2>{{ page.hero }}</h2>
-					{% elsif page.name %}
-						<h2>{{ page.name }}</h2>
-					{% endif %}
-
-					{% if page.subtitle %}
-						<p>{{ page.subtitle }}</p>
-					{% endif %}
-				</div>
-			</section>
-		</header>
 		{{ content }}
 		<footer>
 			<div class="container">
