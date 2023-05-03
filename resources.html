@@ -3,7 +3,7 @@ title: Resources
 hero: Resources
 ---
 
-<ul class="resources">
+<!-- <ul class="resources">
 	{% for resource in site.resources %}
 		<li>
 			<div class="resource-image" style="background-image: url({% include relative-src.html src=resource.image_path %})"></div>
@@ -12,5 +12,13 @@ hero: Resources
 			<div class="info">{{ resource.info }}</div>
 			
 		</li>
+	{% endfor %}
+</ul> -->
+
+<ul class="resources">
+	{% for resource in site.resources %}
+		<li>
+			<div class="name">{{ resource.name }}</div>
+
 	{% endfor %}
 </ul>
