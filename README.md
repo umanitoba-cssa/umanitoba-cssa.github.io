@@ -49,6 +49,14 @@ Run `jekyll` commands through Bundler to ensure you're using the right versions:
 $ bundle exec jekyll serve
 ~~~
 
+alt:
+
+~~~bash
+$ bundle exec jekyll s
+$ Server address: http://127.0.0.1:4000
+~~~
+
+
 ## Editing
 
 This site is already optimised for adding, updating and removing components.
