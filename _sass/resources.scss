@@ -19,6 +19,11 @@
 
 	li {
 		padding: 30px 20px;
+		@media (max-width: 500px) {
+			padding: 30px 30px;
+			margin: 0 60px;
+			flex: 10 0 100%
+		}
 		box-sizing: border-box;
 		flex: 0 1 25%;
 		background: #fff;
