@@ -19,10 +19,14 @@
 
 	li {
 		padding: 30px 20px;
+		@media (max-width: 500px) {
+			padding: 30px 30px;
+			margin: 0 60px;
+			flex: 10 0 100%
+		}
 		box-sizing: border-box;
 		flex: 0 1 25%;
 		background: #fff;
-		// margin: 0 60px;
 		margin-bottom: 3%;
 		border-radius: 3px;
 		box-shadow: 0 10px 100px 0 rgba(0, 0, 0, 0.41);
