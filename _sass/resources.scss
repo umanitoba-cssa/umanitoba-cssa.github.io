@@ -4,38 +4,32 @@
 	background: no-repeat center center;
 	background-size: cover;
 	border-radius: 300px;
-	width: 70%;
-	padding-bottom: 70%;
+	width: 25%;
+	padding-bottom: 25%;
 }
 
 .resources {
-	padding: 0;
 	list-style: none;
 	@extend %flexbox;
 	@include flex-flow(wrap);
-	text-align: center;
-	margin: 10px 0 0 0;
+	text-align: left;
+	margin: -10px 0 0 0;
 	justify-content: center;
 
 	li {
-		padding: 30px 20px;
-		@media (max-width: 500px) {
-			padding: 30px 30px;
-			margin: 0 60px;
-			flex: 10 0 100%
-		}
 		box-sizing: border-box;
-		flex: 0 1 25%;
+		padding: 0px 100px;
+		flex: 0 1 60%;
 		background: #fff;
-		margin: 0 100px;
+		margin: -30px 30px;
 		margin-bottom: 3%;
 		border-radius: 3px;
 		box-shadow: 0 10px 100px 0 rgba(0, 0, 0, 0.41);
 	}
 
 	.square-image {
-		width: 400px;
-		height: 400px;
+		width: 100px;
+		height: 100px;
 
 		img {
 			border-radius: 400px;

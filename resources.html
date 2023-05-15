@@ -6,7 +6,7 @@ hero: Resources
 <ul class="resources">
 	{% for resource in site.resources %}
 		<li>
-			<div class="resource-image" style="background-image: url({% include relative-src.html src=resource.image_path %})"></div>
+			<div style="float: left" class="resource-image" style="background-image: url({% include relative-src.html src=resource.image_path %}) background-size: cover;"></div>
 			<div class="name">{{ resource.name }}</div>
 			<div class="link">{{ resource.link }}</div>
 			<div class="info">{{ resource.info }}</div>
