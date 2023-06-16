@@ -29,6 +29,29 @@ Gems can perform actions like:
 Bundler is a gem that installs all gems in your Gemfile.
 While you don’t have to use Gemfile and bundler, it is highly recommended as it ensures you’re running the same version of Jekyll and its plugins across different environments.
 
+### Jekyll on Ubuntu
+#### Install dependencies
+Install Ruby and other prerequisites:
+
+~~~bash
+$ sudo apt-get install ruby-full build-essential zlib1g-dev
+~~~
+
+Avoid installing RubyGems packages (called gems) as the root user. Instead, set up a gem installation directory for your user account. The following commands will add environment variables to your `~/.bashrc` file to configure the gem installation path:
+
+~~~bash
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+~~~
+
+Finally, install Jekyll and Bundler:
+
+~~~bash
+gem install jekyll bundler
+~~~
+
 ## Develop
 
 Project started with [Jekyll](https://jekyllrb.com/) version 4.2.1, but should support newer versions as well.
